@@ -269,7 +269,7 @@ func WithReportFocus() ProgramOption {
 func WithEnhancedKeyboard() ProgramOption {
 	return func(p *Program) {
 		_WithKittyKeyboard(ansi.KittyDisambiguateEscapeCodes |
-			ansi.KittyReportEventTypes)(p)
+			ansi.KittyReportAllKeysAsEscapeCodes)(p)
 		_WithModifyOtherKeys(1)(p)
 	}
 }
